@@ -96,7 +96,7 @@ if(isset($_POST['check'])){
     	 <div class="well profile">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
-                    <h2>'.$author.' vs '.$author_person2.'</h2>
+                    <h2>'.$author.' vs '.$author_person2.' | Pending payouts</h2>
                 </div>             
                 <div class="col-xs-12 col-sm-4 text-center">
                 </div>
