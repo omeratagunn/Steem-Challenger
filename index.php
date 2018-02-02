@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Steemit Challenger</title>
 	<link href="style.css">
 
     <!-- Bootstrap -->
@@ -22,8 +22,8 @@
 <img src="steemit.png" alt="Steemit" height="200" width="500">
 <nav class="navbar navbar-light bg-faded">
   <form method="POST" class="form-inline">
-    <input name="myself" class="form-control mr-sm-2" type="text" placeholder="Your username" >
-	<input name="someone" class="form-control mr-sm-1" type="text" placeholder="Whois?" >
+    <input name="myself" class="form-control mr-sm-2" type="text" placeholder="Your username" > vs
+	<input name="someone" class="form-control mr-sm-1" type="text" placeholder="Someone you jealous" >
 	<br>	
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="check">Im so jealous</button>
   </form>
@@ -81,22 +81,22 @@ if(isset($_POST['check'])){
 	if($payment_someone > $payment){
 		
 		// if someone which means the username in second input have bigger amount of pending payment - BE JEALOUS //
-		$jealousy = "Im so jealous on you!!!!";
+		$jealousy = '<div class="alert alert-danger"><strong>Damn,</strong> Im so jealous on you!!!!</div>';
 		echo $jealousy;
     }
 	    // ELSE DONT CARE ABOUT HIM //
 		else{
-			$dont_care = "I dont care, im not jealous";
+			$dont_care = '<div class="alert alert-danger"><strong>Yeah!!!</strong> Its okay, im not jealous :(</div>';
 			echo $dont_care;
 		}
 	echo '<br>';
-    echo '<div class="container">
+    echo '<div class="float-left">
 	
 		<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
     	 <div class="well profile">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
-                    <h2>'.$author.'</h2>
+                    <h2>'.$author.' vs '.$author_person2.'</h2>
                 </div>             
                 <div class="col-xs-12 col-sm-4 text-center">
                 </div>
@@ -104,9 +104,9 @@ if(isset($_POST['check'])){
             <div class="col-xs-12 divider text-center">
                 <div class="col-xs-12 col-sm-4 emphasis">
             
-                <div class="col-xs-12 col-sm-4 emphasis">
-                    <h2><strong>'.$payment.'$</strong></h2>                    
-                    <p><small>Pending payments</small></p>
+                  <div class="col-xs-12 col-sm-4 text-center">
+                    <h2>'.$author.' '.$payment.'$</h2><br>
+                    <h2><strong>'.$author_person2.' '.$payment_someone.'$</h2>                 
                     <div class="btn-group dropup btn-block">
                       </button>
                       
@@ -117,30 +117,7 @@ if(isset($_POST['check'])){
 		</div>
 	</div>
 </div>
-	     <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-    	 <div class="well profile">
-            <div class="col-sm-12">
-                <div class="col-xs-12 col-sm-8">
-                    <h2>'.$author_person2.'</h2>
-                </div>             
-                <div class="col-xs-12 col-sm-4 text-center">  
-                </div>
-            </div>            
-            <div class="col-xs-12 divider text-center">
-               
-                    <div class="col-xs-12 col-sm-4 emphasis" allign="center">
-                    <h2><strong>'.$payment_someone.'$</strong></h2>                    
-                    <p><small>Pending payments</small></p>
-                    <div class="btn-group dropup btn-block">
-                      </button>
-                      
-                    </div>
-                </div>
-            </div>
-    	 </div>                 
-		</div>
-	</div>
-</div>
+	     
 	';
   
     }
