@@ -37,7 +37,7 @@
 <?php
     $error = false;
     $payment = 0;
-	$payment_someone = 0;
+	
 if(isset($_GET['check'])){
 	
 	$meme = $_GET['myself'];
@@ -84,6 +84,9 @@ if(isset($_GET['check'])){
 	catch(Exception $me){}
     }
 		}
+		echo '<br><br><br>Total pending payouts:'.$payment.'. STU';
+		echo '<br>Total amount of SBD(dmania, dlive,utopian):'.$payment_end_mine.'. SBD';
+
 	echo '<table class="table">
    <thead class="thead-inverse">
     <tr>
