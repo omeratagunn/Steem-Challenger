@@ -96,7 +96,7 @@ if(isset($_GET['check'])){
 		echo '<div class="alert alert-danger" role="alert">Prices direct fetch from coincapmarket.com ( live )</div>';
 		echo '<div class="alert alert-success" role="alert">Total pending payouts: '.$payment.'. STU</div>';
 		echo '<div class="alert alert-success" role="alert">Total amount of SBD(dmania, dlive,utopian): '.$payment_end_mine.'. SBD</div>';
-		echo '<div class="alert alert-success" role="alert">Total amount of SBD(dmania, dlive,utopian): '.$steem_power.'. SP</div>';
+		echo '<div class="alert alert-success" role="alert">Total amount of SP(dmania, dlive,utopian): '.$steem_power.'. SP</div>';
 	echo '<table class="table">
     <thead class="thead-inverse">
     <tr>
@@ -115,9 +115,9 @@ if(isset($_GET['check'])){
       <td>'.$author.'</td>
 	  <td>'.$btc_mine_total.'</td>
       <td>'.$eth_mine_total.'</td>
-      <td>'.$dollar_mine_total.' TRY</td>
-	  <td>'.$euro_mine_total.' TRY</td>
-	  <td>'.$try_mine_total.' TRY</td>
+      <td>'.$dollar_mine_total.'</td>
+	  <td>'.$euro_mine_total.'</td>
+	  <td>'.$try_mine_total.'</td>
     </tr>
 
     </tbody>
