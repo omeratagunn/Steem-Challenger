@@ -93,7 +93,8 @@ if(isset($_GET['check'])){
 		echo $error_null;
 	}   
 	else{
-		echo '<br><br>	<div class="alert alert-success" role="alert">Total pending payouts: '.$payment.'. STU</div>';
+		echo '<div class="alert alert-danger" role="alert">Prices direct fetch from coincapmarket.com ( live )</div>';
+		echo '<div class="alert alert-success" role="alert">Total pending payouts: '.$payment.'. STU</div>';
 		echo '<div class="alert alert-success" role="alert">Total amount of SBD(dmania, dlive,utopian): '.$payment_end_mine.'. SBD</div>';
 		echo '<div class="alert alert-success" role="alert">Total amount of SBD(dmania, dlive,utopian): '.$steem_power.'. SP</div>';
 	echo '<table class="table">
