@@ -1,6 +1,6 @@
 # Steem-Challenger
 
-Steem challenger has been created because of jealous people. 
+Steem challenger has been created to answer to the question of "how much i will get". By your pending posts you can easily check fiats and coin values of your effort.
 
 - System calculates your pending payouts.
 - Gives you the exact amount after curation and beneficaries cut the amount of SBD and SP you will earn.
