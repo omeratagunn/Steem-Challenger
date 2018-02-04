@@ -77,7 +77,8 @@ if(isset($_GET['check'])){
 	$payment_end_mine = $paymentsbd_mine2 / 2;
 	$dollar_mine_total = $payment_end_mine * $dollarprice;
 	$try_mine_total = $payment_end_mine * $tryprice;
-	
+	$try_mine_total = intval($try_mine_total);
+	$dollar_mine_total = intval($dollar_mine_total);
 	}
    
 	}
