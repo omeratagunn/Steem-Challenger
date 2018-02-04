@@ -33,19 +33,21 @@
 	<br>
 	<b>Note: Calculation based on beneficaries system(dmania, dlive, utopian posts). If you are posting only on steemit results might be different<br>
 	Not: Hesaplamalar dmania, dlive, utopian postlarının kesintilerine göre yapılmıştır. Eğer steemit postu atıyorsanız hesap farklı çıkabilir.
-	
+
 <?php
     $error = false;
     $payment = 0;
-	
+    error_reporting(0);
 if(isset($_GET['check'])){
 	
 	$meme = $_GET['myself'];
 	// if both inputs are empty give error //
 	if(empty($meme)){
 	$error = true;
-	echo "Fill the both inputs";
+	$error_input = '<div class="alert alert-danger"><strong>WARNING!!! </strong>Please type username</div>';
+	echo $error_input;
 	}
+	
 	// both inputs filled, then give the result //
     if($error == false){
     $myself_url = 'https://api.steemjs.com/get_discussions_by_blog?query={"tag":"'.$meme.'","limit":"100"}';
@@ -59,10 +61,13 @@ if(isset($_GET['check'])){
 	$dollarprice = $data_sbd[0]['price_usd'];
 	$tryprice = $data_sbd[0]['price_try'];
 	
+	
 	// Create the loop //
     foreach ($data as $person1) {
 	try
 	{
+		
+		
 	$author=$person1['author'];	
 	
 	
@@ -85,9 +90,21 @@ if(isset($_GET['check'])){
 	catch(Exception $me){}
     }
 		}
+		if($error == false){
+		
+		
+		
+        if($person1['author'] == null){
+		
+		$error = true;
+		$error_null = '<div class="alert alert-danger"><strong>WARNING!!! </strong>This username doesnt exist</div>';
+		echo $error_null;
+		
+	}   
+	else{
 		echo '<br><br><br>Total pending payouts:'.$payment.'. STU';
 		echo '<br>Total amount of SBD(dmania, dlive,utopian):'.$payment_end_mine.'. SBD';
-
+		
 	echo '<table class="table">
    <thead class="thead-inverse">
     <tr>
@@ -107,6 +124,8 @@ if(isset($_GET['check'])){
 
   </tbody>
 </table>';
+}
+		}
   
     }
    
