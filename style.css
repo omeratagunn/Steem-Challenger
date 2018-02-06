@@ -79,3 +79,32 @@ span.tags
     margin-left: -10px;
     z-index: 10;
     }
+
+.logo-class {
+    width: 130px;
+    text-align: center; 
+}
+
+.navbar-default {
+  height: 80px;
+  background-color: white;
+  border-right: none;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 80px;
+}
+
+.currency-live-price-section {
+    height: 80px;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
