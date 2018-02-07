@@ -60,20 +60,82 @@
 </header>
 <center>
 
-<img src="steemit.png" alt="Steemit" height="200" width="500">
+<img src="steemit.png" alt="Steemit" height="200" width="500" class="margin-top-15">
 <nav class="navbar navbar-light bg-faded">
   <form method="GET" class="form-inline">
-    <input name="myself" class="form-control mr-sm-2" type="text" placeholder="Your username" >
-	<br>	
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="check">Give it to me</button>
+    <input name="myself" class="form-control mr-sm-2 margin-top-15" type="text" placeholder="Your username" >	
+    <button class="btn btn-outline-success my-2 my-sm-0 user-submit-button" type="submit" name="check">Give it to me</button>
   </form>
 </nav>
-	System calculates your "total pending payouts" and gives you the amount how much you earned as American Dollars and Turkish liras by the current market ratio from "https://coinmarketcap.com/coins/views/all/"<br>
-	Sistem "bekleyen ödelemerinizi" yani, bekleyen postlarınızın toplam değerini alır(içerde çarpar böler) ve Size sonucu Amerikan doları ve türk lirası olarak güncel "https://coinmarketcap.com/coins/views/all/" market değerine göre hesaplar.<br>
-	
-	<br>
-	<b>Note: Calculation based on beneficaries system(dmania, dlive, utopian posts). If you are posting only on steemit results might be different<br>
-	Not: Hesaplamalar dmania, dlive, utopian postlarının kesintilerine göre yapılmıştır. Eğer steemit postu atıyorsanız hesap farklı çıkabilir.
+
+<!-- demo tables code, use this with your php code. I don't know php so i am leaving the table static -->
+
+<!-- username table code starts -->
+<div class="col-md-10 col-sm-10 col-xs-12 col-lg-10 margin-auto-float-none"> 
+<div class="table-responsive">
+  <table class="table green-table">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Bitcoin</th>
+      <th scope="col">Ethereum</th>
+      <th scope="col">Ripple</th>
+      <th scope="col">STEEM</th>
+      <th scope="col">American dollars</th>
+      <th scope="col">Euro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iamankit</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<!--username table code ends-->
+
+<!-- user posts table code starts -->
+<h3>These are your posts</h3>
+<div class="col-md-10 col-sm-10 col-xs-12 col-lg-10 margin-auto-float-none"> 
+<div class="table-responsive">
+  <table class="table green-table">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Bitcoin</th>
+      <th scope="col">Ethereum</th>
+      <th scope="col">Ripple</th>
+      <th scope="col">STEEM</th>
+      <th scope="col">American dollars</th>
+      <th scope="col">Euro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iamankit</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<!-- user posts table ends-->	
+
+<!-- tables static code ends -->
+
 
 <?php
 
