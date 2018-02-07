@@ -83,6 +83,8 @@ span.tags
 .logo-class {
     width: 130px;
     text-align: center; 
+    height: 80px;
+    border-right: 1px solid #e7e7e7;
 }
 
 .navbar-default {
@@ -90,6 +92,13 @@ span.tags
   background-color: white;
   border-right: none;
   border-radius: 0;
+  margin-bottom: 0px !important;
+}
+
+.user-submit-button {
+    background-color: #1FBF8F !important;
+    margin-top: 14px;
+    margin-left: 10px;
 }
 
 .navbar-default .navbar-nav > li > a,
@@ -107,4 +116,13 @@ span.tags
 
 .margin-top-15 {
     margin-top: 15px;
+}
+
+.margin-auto-float-none {
+    margin: auto;
+    float: none;
+}
+
+.green-table {
+    background-color: #1FBF8F;
 }
