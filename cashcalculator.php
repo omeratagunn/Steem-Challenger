@@ -25,8 +25,16 @@ if(isset($_GET['check'])){
     foreach ($data as $person1) {
 	try
 	{
-	$author=$person1['author'];	
+	$author=$person1['author'];
+    $benef1 = $person1['parent_permlink'];
+	$dmania = "dmania";
+
+	
+	
 	if(!($person1["pending_payout_value"] == "0.00 SBD")){
+		
+		 
+		
     $total_amount_mine = str_replace(" SBD", "", $person1["pending_payout_value"]);
 	$payment = $payment + $total_amount_mine;
 	// Steemit curator cut //
@@ -40,9 +48,10 @@ if(isset($_GET['check'])){
 	$try_mine_total = intval($try_mine_total);
 	$dollar_mine_total = intval($dollar_mine_total);
 	$euro_mine_total = intval($euro_mine_total);
+	$steem_mine_total = intval($steem_mine_total);
 	
 	// Calculation SP //
-	$steem_power = $payment_end_mine / $dollarprice;
+	$steem_power = $payment_end_mine / $steemprice;
 	
     }
     }
@@ -56,37 +65,46 @@ if(isset($_GET['check'])){
 		$error = true;
 		$error_null = '<div class="alert alert-danger"><strong>WARNING!!! </strong>This username doesnt exist</div>';
 		echo $error_null;
+
 	}   
 	else{
 		echo '<div class="alert alert-danger" role="alert">Prices direct fetch from coincapmarket.com ( live )</div>';
 		echo '<div class="alert alert-success" role="alert">Total pending payouts: '.$payment.'. STU</div>';
 		echo '<div class="alert alert-success" role="alert">Total amount of SBD(dmania, dlive,utopian): '.$payment_end_mine.'. SBD</div>';
 		echo '<div class="alert alert-success" role="alert">Total amount of SP(dmania, dlive,utopian): '.$steem_power.'. SP</div>';
-	echo '<table class="table">
-    <thead class="thead-inverse">
+	echo '<div class="col-md-10 col-sm-10 col-xs-12 col-lg-10 margin-auto-float-none"> 
+<div class="table-responsive">
+  <table class="table green-table">
+  <thead>
     <tr>
-      <th>#</th>
-      <th>Username</th>
-      <th>Bitcoin</th>
-	  <th>Ethereum</th>
-      <th>American Dollar</th>
-	  <th>Euro</th>
-	  <th>TRY</th>
+      <th scope="col">Username</th>
+      <th scope="col">Bitcoin</th>
+      <th scope="col">Ethereum</th>
+      <th scope="col">STEEM</th>
+      <th scope="col">American dollars</th>
+      <th scope="col">Euro</th>
+	  <th scope="col">TRY</th>
     </tr>
-    <thead class="thead-inverse">
-    <tbody>
+  </thead>
+  <tbody>
     <tr>
-      <th scope="row">1</th>
       <td>'.$author.'</td>
-	  <td>'.$btc_mine_total.'</td>
+      <td>'.$btc_mine_total.'</td>
       <td>'.$eth_mine_total.'</td>
+      <td>'.$steem_mine_total.'</td>
       <td>'.$dollar_mine_total.'</td>
-	  <td>'.$euro_mine_total.'</td>
+      <td>'.$euro_mine_total.'</td>
 	  <td>'.$try_mine_total.'</td>
     </tr>
-
-    </tbody>
-    </table>';
+  </tbody>
+</table>
+</div>
+</div>';
+	
+	
+	
+	
+	;
     }
 	}
     } 

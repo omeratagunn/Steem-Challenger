@@ -6,5 +6,5 @@
 	$btc_mine_total = $payment_end_mine * $btcprice;
 	$eth_mine_total = $payment_end_mine * $ethprice;
 	$euro_mine_total = $payment_end_mine * $europrice;
-
+    $steem_mine_total = $dollar_mine_total / $steemprice;
 ?>
