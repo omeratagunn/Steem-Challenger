@@ -23,6 +23,7 @@
     $steem_value = 'https://api.coinmarketcap.com/v1/ticker/steem/?convert=USD';
     $json_steem = file_get_contents($steem_value);
     $data_steem = json_decode($json_steem,true);	
-
+	
+	
    
 ?>

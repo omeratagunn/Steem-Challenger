@@ -8,7 +8,7 @@
 		
 			echo '
 	
-    <div class="col-md-10 col-sm-10 col-xs-12 col-lg-10 margin-auto-float-none"> 
+    <div class="col-md-10 col-sm-10 col-xs-12 col-lg-10 margin-right-1"> 
     <div class="table-responsive">
     <table class="table blue-table">
  
