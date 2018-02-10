@@ -12,5 +12,5 @@ Steem challenger has been created to answer to the question of "how much i will 
 !!! WARNING !!! 
 Calculation based on beneficaries system(dmania, dlive, utopian posts). If you are posting only on steemit results might be different
 
-![](https://image.prntscr.com/image/2S3FCoY4T_6Q_oKjoRuYpg.png)
+![](https://image.prntscr.com/image/-0en_XEvQjqgvn7pWy8eRw.png)
 
