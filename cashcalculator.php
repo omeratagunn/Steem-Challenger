@@ -25,11 +25,8 @@ if(isset($_GET['check'])){
     foreach ($data as $person1) {
 	try
 	{
-	$author=$person1['author'];
+	$author = $person1['author'];
     $benef1 = $person1['parent_permlink'];
-	$dmania = "dmania";
-
-	
 	
 	if(!($person1["pending_payout_value"] == "0.00 SBD")){
 		
@@ -69,9 +66,9 @@ if(isset($_GET['check'])){
 	}   
 	else{
 		echo '<div class="alert alert-danger" role="alert">Prices direct fetch from coincapmarket.com ( live )</div>';
-		echo '<div class="alert alert-success" role="alert">Total pending payouts: '.$payment.'. STU</div>';
-		echo '<div class="alert alert-success" role="alert">Total amount of SBD(dmania, dlive,utopian): '.$payment_end_mine.'. SBD</div>';
-		echo '<div class="alert alert-success" role="alert">Total amount of SP(dmania, dlive,utopian): '.$steem_power.'. SP</div>';
+		echo '<div class="alert alert-success" role="alert"><strong>Total pending payouts</strong>: '.$payment.'. STU</div>';
+		echo '<div class="alert alert-success" role="alert"><strong>Total amount of SBD</strong>: '.$payment_end_mine.'. SBD</div>';
+		echo '<div class="alert alert-success" role="alert"><strong>Total amount of SP</strong>: '.$steem_power.'. SP</div>';
 	echo '<div class="col-md-10 col-sm-10 col-xs-12 col-lg-10 margin-auto-float-none"> 
 <div class="table-responsive">
   <table class="table green-table">
@@ -100,10 +97,6 @@ if(isset($_GET['check'])){
 </table>
 </div>
 </div>';
-	
-	
-	
-	
 	;
     }
 	}
