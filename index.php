@@ -6,7 +6,6 @@ include 'modules/converts.php';
 $dollarprice = floatval($dollarprice);
 $steemprice = floatval($steemprice);
 $btcdollar = floatval($btcdollar);
-
 ?>
 
 <html>
@@ -25,7 +24,9 @@ $btcdollar = floatval($btcdollar);
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
 <body>
+
 <header>
+
 	<!-- navbar code starts-->
 	<nav class="navbar navbar-default col-md-8 col-sm-8 col-xs-12 col-lg-8">
   <div class="container-fluid">
@@ -55,15 +56,45 @@ $btcdollar = floatval($btcdollar);
 
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 currency-live-price-section">
 	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 margin-top-15">
-		<p> SBD PRICE</p>
-		<p> <?php echo $dollarprice; ?>$ </p>
+		<p> SBD PRICE <?php 
+		if($sbd_volume > 0){
+		
+		echo '<span class="label label-success">UP %'.$sbd_volume.'</span>';}
+		
+		else {
+			
+			echo '<span class="label label-danger">DOWN %'.$sbd_volume.'</span>';
+		}
+		
+		?></p>
+		<p> <?php echo $dollarprice; ?>$</p>
 	</div>
 	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 margin-top-15">
-		<p> STEEM PRICE</p>
+		<p> STEEM PRICE <?php 
+		if($steem_volume > 0){
+		
+		echo '<span class="label label-success">UP %'.$steem_volume.'</span>';}
+		
+		else {
+			
+			echo '<span class="label label-danger">DOWN %'.$steem_volume.'</span>';
+		}
+		
+		?></p>
 		<p> <?php echo $steemprice; ?>$ </p>
 	</div>
 	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 margin-top-15">
-		<p> BTC PRICE</p>
+		<p> BTC PRICE<?php 
+		if($btc_volume > 0){
+		
+		echo '<span class="label label-success">UP %'.$btc_volume.'</span>';}
+		
+		else {
+			
+			echo '<span class="label label-danger">DOWN %'.$btc_volume.'</span>';
+		}
+		
+		?></p>
 		<p> <?php echo $btcdollar; ?>$ </p>
 	</div>
       
@@ -71,20 +102,14 @@ $btcdollar = floatval($btcdollar);
 <!-- currency price section ends -->
 </header>
 <center>
-
-
 <nav class="navbar navbar-light bg-faded">
   <form method="GET" class="form-inline">
     <input name="myself" class="form-control mr-sm-2 margin-top-15" type="text" placeholder="Your username" >	
     <button class="btn btn-outline-success my-2 my-sm-0 user-submit-button" type="submit" name="check">Give it to me</button>
   </form>
 </nav>
-
-
 <?php
-
 require 'cashcalculator.php';
-
 ?>
 </center>
 </body>
