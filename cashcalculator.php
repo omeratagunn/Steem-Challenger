@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <?php
     $error = false;
@@ -208,4 +207,3 @@ if(isset($_GET['check'])){
 	}
     } 
 ?>
->>>>>>> origin/master
