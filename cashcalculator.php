@@ -28,8 +28,8 @@ if(isset($_GET['check'])){
 	$author = $person1['author'];
     $benef1 = $person1['parent_permlink'];
 	
-	if(!($person1["pending_payout_value"] == "0.00 SBD")){
-		
+	if(!($person1["pending_payout_value"] == "0.00 SBD") and ($author==$meme)){
+
 		 
 		
     $total_amount_mine = str_replace(" SBD", "", $person1["pending_payout_value"]);
