@@ -57,9 +57,31 @@ export const getAccount = (username) => {
 }
 
 /**
+ * Search by username (partial).
+ *
+ * @param partialQuery
+ * @param limit
+ *
+ * @return {*}
+ */
+export const searchUsername = (partialQuery, limit = 5) => {
+  // avoid bigger limits by client code.
+  const localLimit = (limit > 5) ? 5 : limit
+  // do the query.
+  return steem.api.lookupAccounts(partialQuery, localLimit, function(err, result) {
+    if (!err) {
+      return Promise.resolve(result)
+    } else {
+      return Promise.reject(err)
+    }
+  })
+}
+
+/**
  * Default export.
  */
 export default {
   getAccount,
-  getAccounts
+  getAccounts,
+  searchUsername
 }
