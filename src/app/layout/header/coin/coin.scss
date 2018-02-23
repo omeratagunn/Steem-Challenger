@@ -1,0 +1,65 @@
+@import "src/assets/scss/variables";
+
+.coin-info {
+  padding: 6px !important;
+   border: 1px solid $gray-200;
+  border-radius: 6px;
+  background: $gray-100;
+  // box-shadow: 0 0 3px 3px $gray-100;
+  text-align: left;
+  min-width: 150px;
+  display: inline-block;
+  float: left;
+
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+
+  &.STEEM {
+    background-image: url("~src/assets/images/icon-steem.png");
+  }
+  &.SBD {
+    background-image: url("~src/assets/images/icon-steem.png");
+  }
+  &.BTC {
+    background-image: url("~src/assets/images/icon-bitcoin.png");
+  }
+  &.ETH {
+    background-image: url("~src/assets/images/icon-ethereum.png");
+  }
+
+  .coin-title {
+    line-height: 1em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div.label {
+      font-size: 16px;
+      // color: $primary;
+    }
+  }
+  .coin-value {
+    text-align: right;
+    color: $green;
+    padding-top: 8px;
+    .oi {
+      vertical-align: middle;
+      // opacity: 0.7;
+      // font-size: 0.8em;
+      line-height: 1em;
+    }
+    line-height: 1em;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+
+
+  &.falling {
+    .coin-value {
+      color: $red;
+    }
+  }
+}
