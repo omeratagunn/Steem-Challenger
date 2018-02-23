@@ -1,7 +1,8 @@
 // dependencies.
 import steem from '@steemit/steem-js'
-import { get, toArray, isArray } from 'lodash'
+import { get, toArray, isArray, map } from 'lodash'
 import { parseProfile } from '@/services/steem/parsers/profile'
+import { parseWallet } from '@/services/steem/parsers/wallet'
 
 /**
  * Look up an account list on steem.
@@ -46,7 +47,8 @@ export const getAccount = (username) => {
       const account = accounts[0]
       // parse the account profile with the helper (stub.)
       account._profile = parseProfile(get(account, 'json_metadata'))
-
+      // parse wallet information.
+      account._wallet = parseWallet(account)
       // resolve the promise and return.
       return Promise.resolve(account)
     } else {
@@ -67,13 +69,18 @@ export const getAccount = (username) => {
 export const searchUsername = (partialQuery, limit = 5) => {
   // avoid bigger limits by client code.
   const localLimit = (limit > 5) ? 5 : limit
+
+  const fixName = (name) => ({ id: name, label: name })
+
   // do the query.
-  return steem.api.lookupAccounts(partialQuery, localLimit, function(err, result) {
-    if (!err) {
-      return Promise.resolve(result)
-    } else {
-      return Promise.reject(err)
-    }
+  return new Promise((resolve, reject) => {
+    return steem.api.lookupAccounts(partialQuery, localLimit, (err, result) => {
+      if (!err) {
+        return resolve(map(result, fixName))
+      } else {
+        return reject(err)
+      }
+    })
   })
 }
 
