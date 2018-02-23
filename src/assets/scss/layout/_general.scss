@@ -1,0 +1,26 @@
+// body color.
+body {
+  background: $gray-100;
+}
+
+// main content
+#content {
+  // 30px on desktop and tablet.
+  margin-top: 30px;
+
+  // reduce border on mobile.
+  @include media-breakpoint-down(sm) {
+    margin-top: 15px;
+  }
+
+
+
+
+}
+
+//.number  {
+//  font-family: "Oswald", serif;
+//  span {
+//    font-family: "Oswald", serif;
+//  }
+//}
