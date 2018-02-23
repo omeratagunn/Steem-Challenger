@@ -1,0 +1,22 @@
+nav.navbar.navbar-expand-lg.bg-secondary
+  div.container
+    a.navbar-brand(href='/')
+      img(src="@/assets/images/logo.png")
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar-items', aria-controls='navbar-items', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+        span.oi(data-glyph="menu")
+    form
+      #navbar-items.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item.active
+            ch-coin.nav-link(:ticker="steemTicker")
+          li.nav-item.active
+            ch-coin.nav-link(:ticker="sbdTicker")
+          li.nav-item.active
+            ch-coin.nav-link(:ticker="btcTicker")
+          li.nav-item.active
+            ch-coin.nav-link(:ticker="ethTicker")
+      // form.form-inline.my-2.my-lg-0
+        input.form-control.mr-sm-2(type='text', placeholder='@your-username')
+        button.btn.btn-secondary.my-2.my-sm-0(type='submit')
+          span.oi(data-glyph="check")

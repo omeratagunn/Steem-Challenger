@@ -1,0 +1,38 @@
+
+.navbar {
+  padding: 0.7rem 1rem !important;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  padding: 0 !important;
+}
+.navbar {
+  text-align: right;
+  .navbar-brand {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+  }
+
+  #navbar-items {
+    float: right;
+    text-align: right;
+    line-height: 16px;
+
+    > ul {
+      & > li:last-child {
+        padding-right: 0 !important;
+      }
+    }
+
+    ul {
+      li {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+  }
+
+
+}
