@@ -1,0 +1,54 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.profile-posts {
+  padding: 0 !important;
+
+  table.table {
+    margin-bottom: 0;
+
+
+    thead , tbody {
+      > tr {
+        &.total {
+          font-size: 20px;
+        }
+        > .center {
+          text-align: center;
+        }
+
+        > .right {
+          text-align: right;
+        }
+        > .bold {
+          font-weight: 600;
+        }
+        > .primary {
+          font-family: 'Oswald', serif;
+          font-weight: 500;
+          color: $primary;
+        }
+      }
+    }
+
+    thead {
+      tr {
+        > th:first-child {
+          padding-left: 15px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        > th:first-child {
+          padding-left: 15px;
+        }
+
+        > td:last-child {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}

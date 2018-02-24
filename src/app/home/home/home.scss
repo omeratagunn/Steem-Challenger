@@ -1,0 +1,59 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.home-content {
+  .search-box {
+    padding: 40px 0;
+
+    .form-row {
+      // overflow: hidden;
+      border-bottom: 3px solid rgba(91, 81, 162, 0.6);
+      padding: 15px 0 15 0;
+      height: 100%;
+      background: white;
+      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.02);
+      border-radius: 5px;
+      position: relative;
+
+    }
+
+    .input-group {
+      margin-bottom: 0 !important;
+    }
+
+    button {
+      margin: 0 !important;
+      width: 100%;
+    }
+
+    .input-group-text {
+      //font-weight: 500;
+      //font-size: 20px;
+      position: absolute;
+      padding-left: 5px;
+      // left: 0;
+    }
+
+    input {
+      padding-left: 30px;
+    }
+
+    input, .input-group-text {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1em;
+    }
+
+    .input-group-text {
+      color: $purple;
+    }
+
+    .right {
+      float: right;
+      text-align: right;
+      margin-right: 0;
+      padding-right: 0 !important;
+    }
+
+  }
+}

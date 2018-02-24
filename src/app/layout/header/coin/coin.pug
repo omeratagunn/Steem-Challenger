@@ -1,0 +1,11 @@
+div.coin-info(v-if="ticker", :class="[{ falling: isFalling }, ticker.symbol]")
+  // div.coin-title {{ ticker }}
+  div.coin-title
+    div.label {{ ticker.symbol }}
+    div.direction
+      span.oi(data-glyph="arrow-thick-bottom", v-if="isFalling")
+      span.oi(data-glyph="arrow-thick-top", v-if="!isFalling")
+      span {{ ticker.percent_change_24h }}%
+  div.coin-value.number
+    span $&nbsp;
+    span {{ ticker.price_usd }}

@@ -1,0 +1,19 @@
+// profile page wrapper.
+div.row.row-eq-height.profile-content(v-if="!loading")
+  div.col
+    // first line row wrapper
+    div.row.row-eq-height
+      // profile information / user box.
+      ch-profile-user.col-lg-6()
+      // profile information / user box.
+      ch-profile-wallet.col-lg-6()
+
+      // wallet information.
+      // ch-box.col-lg-6
+        div.row.row-eq-height
+          div.col-lg-4.profile-avatar
+            span 123
+
+
+    div.row.row-eq-height
+      ch-profile-posts.col-lg-12()

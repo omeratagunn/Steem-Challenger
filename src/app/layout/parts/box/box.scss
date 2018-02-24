@@ -1,0 +1,70 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+// external box layout.
+.ch-box.box {
+
+  // box margin.
+  margin-bottom: 30px;
+
+  // mobile box margin.
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 15px;
+  }
+
+  // inner box parts.
+  .box-inner {
+    overflow: hidden;
+    border-bottom: 3px solid rgba(91, 81, 162, 0.6);
+    padding: 15px;
+    height: 100%;
+    background: white;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+    position: relative;
+
+
+    &.no-padding {
+      .box-title {
+        margin-bottom: 0;
+      }
+      padding-bottom: 0 !important;
+    }
+
+    .box-title {
+      border-bottom: 1px solid $gray-300;
+      background: $gray-100;
+      margin-top: -15px;
+      margin-bottom: 15px;
+      padding: 10px 0 10px 0;
+      position: relative;
+      h2 {
+        // padding: 5px 0;
+        position: relative;
+        margin-bottom: 0;
+        line-height: 1em;
+        vertical-align: top;
+        // padding-left: 25px;
+        font-size: 18px;
+        color: $gray-600;
+        font-weight: 400;
+        font-family: 'Oswald', sans-serif;
+        em {
+          // left: -5px;
+          position: absolute;
+          right: 0;
+          // color: $purple;
+          opacity: 0.3;
+          line-height: 1em;
+          // font-size: 22px;
+          margin-right: 0;
+          width: 1em;
+        }
+      }
+
+
+    }
+
+  }
+
+}

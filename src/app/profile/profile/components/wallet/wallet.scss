@@ -1,0 +1,55 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.profile-wallet {
+  .balances {
+    text-align: center;
+    i {
+      font-size: 22px;
+    }
+
+
+    .right-col {
+      small {
+        display: block;
+        font-size: 0.8em;
+      }
+      margin-top: 20px;
+      text-align: right;
+      .left {
+        text-align: left;
+      }
+      .right {
+        text-align: right;
+      }
+    }
+
+    span {
+      font-family: 'oswald', sans-serif;
+    }
+
+    span.usd-total {
+      padding-top: 20px;
+      font-size: 30px;
+      display: block;
+      color: $purple;
+      small {
+        font-size: 14px;
+      }
+    }
+
+    span.usd-value {
+      color: $purple;
+      font-family: 'oswald', sans-serif;
+      display: block;
+      font-size: 20px;
+    }
+    span {
+      font-size: 16px;
+    }
+    small {
+      color: #444;
+      font-size: 14px;
+    }
+  }
+}
