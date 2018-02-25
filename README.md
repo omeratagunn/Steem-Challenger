@@ -1,6 +1,6 @@
 # Steem-Challenger 2.0
 
-Online here : http://omeratagun.tk
+Online here : http://steem.show
 
 Steem challenger has been created to answer to the question of "how much i will get".
 By your pending posts you can easily check fiats and coin values of your effort.
