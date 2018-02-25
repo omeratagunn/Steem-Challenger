@@ -1,0 +1,5 @@
+// warapper
+div.ch-user-search
+  // auto complete input.
+  v-autocomplete(:items="items", input-class="form-control", v-model="current", :get-label="getLabel",
+  :component-item='template', @input="setSelected", @change="updateQuery",@update-items="updateItems")

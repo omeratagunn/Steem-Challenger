@@ -1,0 +1,15 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.ch-user-search-item {
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+
+  span {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+}

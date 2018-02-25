@@ -65,6 +65,7 @@
     "simple-line-icons": "^2.4.1",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "v-autocomplete": "^1.8.2",
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
     "vue-router": "^3.0.1",
