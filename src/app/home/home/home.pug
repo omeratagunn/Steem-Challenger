@@ -1,5 +1,6 @@
 // home wrapper
 div.row.row-eq-height.home-content.justify-content-center
+
   div.col-lg-6.search-box
 
       div.col-lg
@@ -11,7 +12,7 @@ div.row.row-eq-height.home-content.justify-content-center
               .input-group.mb-2
                 .input-group-prepend
                   .input-group-text @
-                input#query.form-control(type='text', placeholder='Username', v-model="query")
+                ch-user-search(v-model="query", @selected="redirect", @input="updateQuery")
             div.col-2.right
               button.btn.btn-primary.mb-2(type='submit', @click="redirect") Show
 
