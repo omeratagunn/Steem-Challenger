@@ -6,6 +6,19 @@ import { get } from 'lodash'
  */
 export default {
   /**
+   * Max length on USD values.
+   *
+   * @return {string}
+   */
+  roundedValue () {
+    // extract price.
+    const price = get(this.ticker, 'price_usd')
+
+    // format it.
+    return Number(price).toLocaleString(undefined, { style: 'decimal', minimumFractionDigits: 0, maximumFractionDigits: 4 })
+  },
+
+  /**
    * Detect the price movement for a given coin on the last 24 hours as fall or rise.
    *
    * @return {boolean}

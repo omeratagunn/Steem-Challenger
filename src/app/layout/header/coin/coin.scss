@@ -6,6 +6,7 @@ $coin-light-red: lighten($red, 40%);
 $coin-light-green: lighten($teal, 40%);
 $coin-light-gray: lighten($gray-100, 2%);
 .coin-info {
+  position: relative;
   padding: 6px !important;
   border: 1px solid $coin-light-green;
   border-radius: 6px;
@@ -64,8 +65,25 @@ $coin-light-gray: lighten($gray-100, 2%);
     // letter-spacing: -0.025em;
   }
 
+  &:before {
+    font-family: 'simple-line-icons';
+    content: "\e078";
+    color: $green;
+    font-weight: 600;
+    opacity: 0.3;
+    font-size: 18px;
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+  }
 
   &.falling {
+
+    &:before {
+      color: $red;
+      content: "\e07b";
+    }
+
     border-color: $coin-light-red;
     .coin-value {
       color: $red;
