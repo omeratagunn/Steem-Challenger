@@ -3,6 +3,7 @@ import steem from '@steemit/steem-js'
 import { get, toArray, isArray, map } from 'lodash'
 import { parseProfile } from '@/services/steem/parsers/profile'
 import { parseWallet } from '@/services/steem/parsers/wallet'
+import { getSteemPower } from '@/services/steem/parsers/vests'
 
 /**
  * Look up an account list on steem.
@@ -49,8 +50,11 @@ export const getAccount = (username) => {
       account._profile = parseProfile(get(account, 'json_metadata'))
       // parse wallet information.
       account._wallet = parseWallet(account)
+
       // resolve the promise and return.
-      return Promise.resolve(account)
+      return getSteemPower(account.vesting_shares).then(v => {
+        account._sp = v
+      }).then(() => Promise.resolve(account))
     } else {
       // reject with not found message.
       return Promise.reject(new Error('STEEM_ACCOUNT_NOT_FOUND'))
