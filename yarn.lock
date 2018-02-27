@@ -5815,6 +5815,10 @@ roboto-fontface@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/roboto-fontface/-/roboto-fontface-0.9.0.tgz#4829eeffc0502f09b88c7f3980fa3b304eda4c49"
 
+roboto-slab-fontface-kit@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/roboto-slab-fontface-kit/-/roboto-slab-fontface-kit-1.0.2.tgz#3ff66e72096e486cbdacdf7a89cddfe2bbfc89e4"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
