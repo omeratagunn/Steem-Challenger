@@ -2,7 +2,7 @@
 @import "src/assets/scss/mixins";
 
 
-$coin-red-bg: lighten(red, 72%);
+$coin-red-bg: lighten($red, 47%);
 $coin-green-bg: lighten($teal, 50%);
 
 .coin-info {
