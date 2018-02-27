@@ -45,10 +45,16 @@ ch-box(v-if="loading !== true", title="User Details", icon="icon-user")
     div.account-badges
       // badges
       div.badges
+        // posts count.
         span.badge.badge-primary.badge-lg
           span {{ account.post_count }}
           | &nbsp;Posts
+        // voting power.
         span.badge.badge-primary.badge-lg
           span {{ account.voting_power | percent }}
           | &nbsp;VP
+        // steem power.
+        span.badge.badge-primary.badge-lg
+          span {{ account._sp | steemPower }}
+          | &nbsp;SP
 

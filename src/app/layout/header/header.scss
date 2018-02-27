@@ -18,22 +18,19 @@
   }
 
   #navbar-items {
-    float: right;
-    text-align: right;
     line-height: 16px;
+    text-align: right;
+    align-content: right;
+    align-items: right;
+    align-self: right;
+    width: auto;
+    flex-direction: row-reverse;
 
-    > ul {
-      & > li:last-child {
-        padding-right: 0 !important;
-      }
+    > div {
+      margin-left: 10px;
     }
 
-    ul {
-      li {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
+
 
   }
 

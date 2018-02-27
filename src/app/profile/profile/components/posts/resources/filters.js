@@ -11,7 +11,7 @@ export default {
    * @return {string}
    */
   roundAmount (value) {
-    return Number(value).toLocaleString(undefined, { style: 'currency', currency: 'usd', minimumFractionDigits: 2 })
+    return Number(value).toLocaleString(undefined, { style: 'decimal', minimumFractionDigits: 0, maximumFractionDigits: 2 })
   },
 
   /**

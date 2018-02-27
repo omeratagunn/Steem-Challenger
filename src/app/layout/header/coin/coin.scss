@@ -1,10 +1,15 @@
 @import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+
+$coin-red-bg: lighten(red, 72%);
+$coin-green-bg: lighten($teal, 50%);
 
 .coin-info {
   padding: 6px !important;
-   border: 1px solid $gray-200;
+  border: 1px solid $gray-200;
   border-radius: 6px;
-  background: $gray-100;
+  background-color: $coin-green-bg;
   // box-shadow: 0 0 3px 3px $gray-100;
   text-align: left;
   min-width: 150px;
@@ -39,6 +44,7 @@
     }
   }
   .coin-value {
+    font-family: 'Roboto Slab', sans-serif;
     text-align: right;
     color: $green;
     padding-top: 8px;
@@ -52,12 +58,12 @@
     vertical-align: middle;
     font-size: 18px;
     font-weight: 600;
-    letter-spacing: -0.025em;
+    // letter-spacing: -0.025em;
   }
 
 
-
   &.falling {
+    background-color: $coin-red-bg;
     .coin-value {
       color: $red;
     }

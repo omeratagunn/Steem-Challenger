@@ -12,10 +12,12 @@ ch-box(v-if="loading !== true", title="Wallet", icon="icon-wallet")
           div.col-lg-12
             span.usd-total
               // em.icon-graph
-              | ~USD {{ usdWallet.sum | roundAmount }}
-            span USD {{ usdWallet.totals.balance | roundAmount }} BALANCE
-            span &nbsp;/&nbsp;
-            span USD {{ usdWallet.totals.savings | roundAmount }} SAVINGS
+              | ${{ usdWallet.sum | roundAmount }}
+            span ${{ usdWallet.totals.balance | roundAmount }}
+              small &nbsp;BALANCE
+            br
+            span ${{ usdWallet.totals.savings | roundAmount }}
+              small &nbsp;SAVINGS
             // br
             // small (approximate conversion)
       div.col-lg-12.right-col
