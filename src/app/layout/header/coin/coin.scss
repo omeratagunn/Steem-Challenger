@@ -2,14 +2,15 @@
 @import "src/assets/scss/mixins";
 
 
-$coin-red-bg: lighten(red, 72%);
-$coin-green-bg: lighten($teal, 50%);
-
+$coin-light-red: lighten($red, 40%);
+$coin-light-green: lighten($teal, 40%);
+$coin-light-gray: lighten($gray-100, 2%);
 .coin-info {
+  position: relative;
   padding: 6px !important;
-  border: 1px solid $gray-200;
+  border: 1px solid $coin-light-green;
   border-radius: 6px;
-  background-color: $coin-green-bg;
+  background-color: $coin-light-gray;
   // box-shadow: 0 0 3px 3px $gray-100;
   text-align: left;
   min-width: 150px;
@@ -36,10 +37,13 @@ $coin-green-bg: lighten($teal, 50%);
     line-height: 1em;
     font-weight: 600;
     display: flex;
+    font-family: 'Roboto Slab', sans-serif;
+
     flex-direction: row;
     justify-content: space-between;
     div.label {
-      font-size: 16px;
+      font-size: 14px;
+      color: $gray-700;
       // color: $primary;
     }
   }
@@ -61,9 +65,26 @@ $coin-green-bg: lighten($teal, 50%);
     // letter-spacing: -0.025em;
   }
 
+  &:before {
+    font-family: 'simple-line-icons';
+    content: "\e078";
+    color: $green;
+    font-weight: 600;
+    opacity: 0.3;
+    font-size: 18px;
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+  }
 
   &.falling {
-    background-color: $coin-red-bg;
+
+    &:before {
+      color: $red;
+      content: "\e07b";
+    }
+
+    border-color: $coin-light-red;
     .coin-value {
       color: $red;
     }

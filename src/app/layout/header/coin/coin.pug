@@ -8,4 +8,4 @@ div.coin-info(v-if="ticker", :class="[{ falling: isFalling }, ticker.symbol]")
       span {{ ticker.percent_change_24h }}%
   div.coin-value.number
     span $&nbsp;
-    span {{ ticker.price_usd }}
+    span {{ roundedValue }}
