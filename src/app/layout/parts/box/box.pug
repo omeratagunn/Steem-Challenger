@@ -4,7 +4,9 @@ div.ch-box.box
       div.col
         h2
           em(:class="icon") &nbsp;
-          span {{ title }}
+          div
+            | {{ title }}
+            slot.title-extra(name="title-extra")
     div.row.row-eq-height
       slot
 
