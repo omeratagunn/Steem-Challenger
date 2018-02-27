@@ -11,7 +11,7 @@
 
     .right-col {
       small {
-        display: block;
+        // display: block;
         font-size: 0.8em;
       }
       margin-top: 20px;
@@ -25,7 +25,14 @@
     }
 
     span {
-      font-family: 'oswald', sans-serif;
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: 600;
+      small {
+        &:before {
+          content: " ";
+        }
+        font-family: 'Roboto', sans-serif;
+      }
     }
 
     span.usd-total {
@@ -40,8 +47,8 @@
 
     span.usd-value {
       color: $purple;
-      font-family: 'oswald', sans-serif;
-      display: block;
+      font-family: 'Roboto Slab', sans-serif;
+      // display: block;
       font-size: 20px;
     }
     span {
