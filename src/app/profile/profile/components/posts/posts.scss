@@ -7,6 +7,18 @@
   table.table {
     margin-bottom: 0;
 
+    &.table-no-payouts {
+      td {
+        text-align: center;
+        > span {
+          font-weight: bold;
+          &:after {
+            content: ' ';
+          }
+        }
+      }
+    }
+
 
     thead , tbody {
       > tr {
