@@ -31,4 +31,4 @@ export const pendingPayoutSum = ({ discussions }) => sumBy(discussions, '_pendin
 export const name = ({ profile }) => get(profile, 'name', null)
 export const website = ({ profile }) => get(profile, 'website', null)
 export const location = ({ profile }) => get(profile, 'location', null)
-export const profileImage = ({ profile }) => get(profile, 'profile_image', null)
+export const profileImage = ({ username }) => `https://img.busy.org/@${username}`

@@ -7,7 +7,7 @@ ch-box(v-if="loading !== true", title="User Details", icon="icon-user")
       // profile image.
       div.col-lg-12
         div.box-circle
-          img(:src="profile.profile_image", v-if="profile && profile.profile_image")
+          img(:src="profileImage")
 
       // profile username.
       div.col-lg-12
@@ -21,23 +21,26 @@ ch-box(v-if="loading !== true", title="User Details", icon="icon-user")
       // account name.
       div.row
         div.col
-          div.line.name(v-if="name !== null")
+          div.line.name
             em.icon-info
-            span &nbsp;{{ name }}
+            span(v-if="name !== null") &nbsp;{{ name }}
+            span.missing(v-else) &nbsp;name not set.
 
       // account location.
       div.row
         div.col
-          div.line.location(v-if="location !== null")
+          div.line.location
             em.icon-location-pin
-            span &nbsp;{{ location }}
+            span(v-if="location !== null") &nbsp;{{ location }}
+            span.missing(v-else) &nbsp;location not set.
 
       // account website.
       div.row
         div.col
-          div.line.website(v-if="website !== null")
+          div.line.website
             em.icon-link
-            span &nbsp;{{ website }}
+            span(v-if="website !== null") &nbsp;{{ website }}
+            span.missing(v-else) &nbsp;website not set.
 
 
 
