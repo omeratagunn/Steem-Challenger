@@ -1,5 +1,5 @@
 // user profile wallet
-ch-box(v-if="loading !== true", :padded="false", title="Pending Payout Posts: ", icon="icon-hourglass")
+ch-box(v-if="loading !== true", :padded="false", title="Pending Payouts: ", icon="icon-hourglass")
   span.title-extra(slot="title-extra")
     | ${{ convertSbdToUSD(totalPayout) | roundAmount }}
   // profile wallet wrapper.
@@ -12,7 +12,14 @@ ch-box(v-if="loading !== true", :padded="false", title="Pending Payout Posts: ",
 
     // post break down table.
     div.table-responsive
-      table.table
+      table.table.table-no-payouts(v-if="pendingDiscussionsCount === 0")
+        tbody
+          tr
+            td
+              span @{{ username }}
+              | has no pending payouts at the moment.
+
+      table.table(v-if="pendingDiscussionsCount > 0")
         thead
           tr
             th(scope='col') Post

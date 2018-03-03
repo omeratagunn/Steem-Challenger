@@ -41,6 +41,15 @@ export default {
   },
 
   /**
+   * Count on the total pending discussions.
+   *
+   * @return {number}
+   */
+  pendingDiscussionsCount () {
+    return this.pendingDiscussions.length
+  },
+
+  /**
    * Sum all pending payouts to display a total pending rewards.
    *
    * @return {*}

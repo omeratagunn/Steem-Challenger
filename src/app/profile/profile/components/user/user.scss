@@ -4,6 +4,10 @@
 .profile-content {
   .line {
     line-height: 1.8em;
+
+    .missing {
+      opacity: 0.4;
+    }
   }
 
   em {
