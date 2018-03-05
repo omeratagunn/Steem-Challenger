@@ -33,6 +33,6 @@ export default {
    * @return {string}
    */
   humanDate (value) {
-    return moment(value).fromNow()
+    return moment.utc(value).fromNow()
   }
 }
