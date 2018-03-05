@@ -1,6 +1,14 @@
 // profile page wrapper.
-div.row.row-eq-height.profile-content(v-if="!loading")
-  div.col
+div.row.row-eq-height.profile-content
+  div.col(v-if="error === true")
+    div.not-found-message
+      em.icon-exclamation
+      span
+        | Sorry, the account you're looking for could not be found.
+        br
+        a(href="/") Click here
+        | , to try again
+  div.col(v-if="error === false && !loading")
     // first line row wrapper
     div.row.row-eq-height
       // profile information / user box.
