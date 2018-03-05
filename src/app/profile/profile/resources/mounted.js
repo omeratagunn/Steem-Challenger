@@ -5,5 +5,7 @@ export default function () {
   const username = get(this.$route.params, 'username')
 
   // call the user loading action.
-  this.loadUserByUsername(username)
+  this.loadUserByUsername(username).catch(() => {
+    this.error = true
+  })
 }
