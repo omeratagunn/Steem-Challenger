@@ -56,6 +56,17 @@ export default {
   },
 
   /**
+   * Comments state mutation.
+   *
+   * @param state
+   * @param comments
+   */
+  setComments (state, comments) {
+    // set on state.
+    state.comments = comments
+  },
+
+  /**
    * Account profile mutation.
    *
    * @param state

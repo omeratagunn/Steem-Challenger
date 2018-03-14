@@ -23,6 +23,14 @@ export default {
         return account
       })
       .then((account) => {
+        return discussions.getByComments(username)
+      })
+      .then((comments) => {
+        commit('setComments', comments)
+
+        return comments
+      })
+      .then(() => {
         return discussions.getByBlog(username)
       })
       .then((discussions) => {

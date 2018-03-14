@@ -20,6 +20,9 @@ export const account = ({ account }) => account
 // discussions getter.
 export const discussions = ({ discussions }) => discussions
 
+// comments getter.
+export const comments = ({ comments }) => comments
+
 // account wallet.
 export const wallet = ({ account }) => get(account, '_wallet', {})
 

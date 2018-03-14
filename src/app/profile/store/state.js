@@ -30,6 +30,11 @@ export default {
   discussions: null,
 
   /**
+   * List of recent comments by a given user.
+   */
+  comments: null,
+
+  /**
    * Current rates for pairs.
    */
   rates: {
