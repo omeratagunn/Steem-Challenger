@@ -35,6 +35,11 @@ export default {
   comments: null,
 
   /**
+   * Median history price feed.
+   */
+  priceFeed: 0.0,
+
+  /**
    * Current rates for pairs.
    */
   rates: {

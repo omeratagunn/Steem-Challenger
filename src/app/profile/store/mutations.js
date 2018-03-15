@@ -67,6 +67,17 @@ export default {
   },
 
   /**
+   * Price Feed mutation.
+   *
+   * @param state
+   * @param priceFeed
+   */
+  setPriceFeed (state, priceFeed) {
+    // set on state.
+    state.priceFeed = priceFeed
+  },
+
+  /**
    * Account profile mutation.
    *
    * @param state
