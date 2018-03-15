@@ -56,6 +56,28 @@ export default {
   },
 
   /**
+   * Comments state mutation.
+   *
+   * @param state
+   * @param comments
+   */
+  setComments (state, comments) {
+    // set on state.
+    state.comments = comments
+  },
+
+  /**
+   * Price Feed mutation.
+   *
+   * @param state
+   * @param priceFeed
+   */
+  setPriceFeed (state, priceFeed) {
+    // set on state.
+    state.priceFeed = priceFeed
+  },
+
+  /**
    * Account profile mutation.
    *
    * @param state

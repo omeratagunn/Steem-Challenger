@@ -1,9 +1,9 @@
 // user profile wallet
-ch-box(v-if="loading !== true", :padded="false", title="Pending Posts Payouts: ", icon="icon-hourglass")
+ch-box(v-if="loading !== true", :padded="false", title="Pending Comments Payout: ", icon="icon-hourglass")
   span.title-extra(slot="title-extra")
     | ${{ convertSbdToUSD(totalPayout) | roundAmount }}
   // profile wallet wrapper.
-  div.col-lg-12.profile-posts
+  div.col-lg-12.profile-comments
     // single row table to display total payout.
     // table.table
       tbody
@@ -22,7 +22,7 @@ ch-box(v-if="loading !== true", :padded="false", title="Pending Posts Payouts: "
       table.table(v-if="pendingDiscussionsCount > 0")
         thead
           tr
-            th(scope='col') Post
+            th(scope='col') Comment
             th.right(scope='col') CashOut
             th.right(scope='col') Beneficiaries
             th.right(scope='col') SBD
@@ -32,14 +32,20 @@ ch-box(v-if="loading !== true", :padded="false", title="Pending Posts Payouts: "
           tr(v-for="post in pendingDiscussions", v-if="post._pending_payout_value > 0")
             // link to the post.
             th(scope="row", data-toggle="tooltip", data-placement="auto", :title="post.body | limit")
-              a(:href="'https://steemit.com'+post.url", target="_blank") {{ post.title }}
+              a(:href="'https://steemit.com'+post.url", target="_blank")
+                | {{ post.permlink }}
             // when is the money be available?
-            td.right(data-toggle="tooltip", data-placement="auto", :title="post.cashout_time | localDate") {{ post.cashout_time | humanDate }}
+            td.right(data-toggle="tooltip", data-placement="auto", :title="post.cashout_time | localDate")
+              | {{ post.cashout_time | humanDate }}
             // percent value for beneficiaries.
-            td.right(data-toggle="tooltip", data-placement="auto", :title="post._beneficiaries_percent.who") {{ post._beneficiaries_percent.sum | percent }}
+            td.right(data-toggle="tooltip", data-placement="auto", :title="post._beneficiaries_percent.who")
+              | {{ post._beneficiaries_percent.sum | percent }}
             // amount in SBD.
-            td.right {{ post._actual_pending_reward | roundAmount }} SBD
+            td.right
+              | {{ post._actual_pending_reward | roundAmount }} SBD
             // amount in SP.
-            td.right {{ (post._actual_pending_reward / priceFeed) | roundAmount }} SP
+            td.right
+              | {{ (post._actual_pending_reward / priceFeed) | roundAmount }} SP
             // amount in USD.
-            td.right.bold.primary ${{ convertSbdToUSD(post._actual_pending_reward) | roundAmount }}
+            td.right.bold.primary
+              | ${{ convertSbdToUSD(post._actual_pending_reward) | roundAmount }}

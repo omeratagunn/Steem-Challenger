@@ -20,6 +20,12 @@ export const account = ({ account }) => account
 // discussions getter.
 export const discussions = ({ discussions }) => discussions
 
+// comments getter.
+export const comments = ({ comments }) => comments
+
+// median price feed (3.5 days average).
+export const priceFeed = ({ priceFeed }) => priceFeed
+
 // account wallet.
 export const wallet = ({ account }) => get(account, '_wallet', {})
 

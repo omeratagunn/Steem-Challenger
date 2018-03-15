@@ -13,7 +13,7 @@ export default {
     'loading',
     'username',
     'wallet',
-    'discussions',
+    'comments',
     'priceFeed'
   ]),
 
@@ -33,7 +33,7 @@ export default {
    */
   pendingDiscussions () {
     // filter with positive pending payout values.
-    const pendingOnly = filter(this.discussions, (post) => {
+    const pendingOnly = filter(this.comments, (post) => {
       return post._pending_payout_value > 0
     })
 

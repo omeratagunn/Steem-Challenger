@@ -30,6 +30,16 @@ export default {
   discussions: null,
 
   /**
+   * List of recent comments by a given user.
+   */
+  comments: null,
+
+  /**
+   * Median history price feed.
+   */
+  priceFeed: 0.0,
+
+  /**
    * Current rates for pairs.
    */
   rates: {

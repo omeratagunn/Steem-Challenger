@@ -4,7 +4,7 @@
  * Store actions.
  */
 
-import { account, discussions } from 'src/services/steem'
+import { account, discussions, priceFeed } from 'src/services/steem'
 import { get } from 'lodash'
 
 export default {
@@ -22,13 +22,14 @@ export default {
 
         return account
       })
-      .then((account) => {
-        return discussions.getByBlog(username)
-      })
-      .then((discussions) => {
-        commit('setDiscussions', discussions)
-
-        return discussions
+      .then((account) => discussions.getByComments(username))
+      .then((comments) => { commit('setComments', comments); return comments })
+      .then(() => discussions.getByBlog(username))
+      .then((discussions) => { commit('setDiscussions', discussions); return discussions })
+      .then(() => priceFeed.getMedianHistoryPrice())
+      .then((feed) => {
+        commit('setPriceFeed', feed)
+        return feed
       })
   }
 }
