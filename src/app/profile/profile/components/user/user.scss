@@ -2,6 +2,23 @@
 @import "src/assets/scss/mixins";
 
 .profile-content {
+
+  span.rank {
+    font-family: 'Robot Slab', sans-serif;
+    font-weight: 600;
+    opacity: 0.6;
+    font-size: 12px;
+    line-height: 1em;
+    vertical-align: middle;
+    padding-left: 20px;
+    &:before {
+      content: "[ ";
+    }
+    &:after {
+      content: " ]";
+    }
+  }
+
   .line {
     line-height: 1.8em;
 
@@ -54,10 +71,12 @@
   }
 
   .badge {
-    font-size: 14px;
+    font-size: 12px;
     padding: 5px;
+    font-weight: 600;
     span {
-      font-weight: bold;
+      font-size: 14px;
+      font-weight: 700;
     }
   }
 

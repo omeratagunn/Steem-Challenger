@@ -1,5 +1,7 @@
 // user profile box
 ch-box(v-if="loading !== true", title="User Details", icon="icon-user")
+  span.rank(slot="title-extra")
+    | {{ rank }}
   // profile image / left section
   div.col-lg-4.profile-avatar
     // wrapper
@@ -49,15 +51,15 @@ ch-box(v-if="loading !== true", title="User Details", icon="icon-user")
       // badges
       div.badges
         // posts count.
-        span.badge.badge-primary.badge-lg
+        span.badge.badge-primary
           span {{ account.post_count }}
           | &nbsp;Posts
         // voting power.
-        span.badge.badge-primary.badge-lg
+        span.badge.badge-primary
           span {{ account.voting_power | percent }}
           | &nbsp;VP
         // steem power.
-        span.badge.badge-primary.badge-lg
+        span.badge.badge-primary
           span {{ account._sp | steemPower }}
           | &nbsp;SP
 
