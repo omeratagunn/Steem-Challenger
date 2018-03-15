@@ -22,11 +22,11 @@ ch-box(v-if="loading !== true", title="Wallet", icon="icon-wallet")
             // small (approximate conversion)
       div.col-lg-12.right-col
         div.row
-          div.col-lg-6.left
+          div.col-6.left
             span.usd-value
               | {{ wallet.totals.steem | roundAmount }}
               small STEEM
-          div.col-lg-6.right
+          div.col-6.right
             span.usd-value
               | {{ wallet.totals.sbd | roundAmount }}
               small SBD
