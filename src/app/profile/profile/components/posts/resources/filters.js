@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { toString } from 'lodash'
 /**
  * Filters.
  */
@@ -34,5 +35,27 @@ export default {
    */
   humanDate (value) {
     return moment.utc(value).fromNow()
+  },
+
+  /**
+   * Local date time format.
+   *
+   * @param value
+   *
+   * @return {string}
+   */
+  localDate (value) {
+    return moment.utc(value).calendar()
+  },
+
+  /**
+   * List a given string value.
+   *
+   * @param value
+   */
+  limit (value) {
+    const limit = toString(value)
+
+    return (limit.length > 150) ? (limit.substring(0, 147) + '...') : limit
   }
 }

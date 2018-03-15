@@ -1,4 +1,7 @@
+// dependencies.
 import moment from 'moment'
+import { toString } from 'lodash'
+
 /**
  * Filters.
  */
@@ -37,11 +40,24 @@ export default {
   },
 
   /**
+   * Local date time format.
+   *
+   * @param value
+   *
+   * @return {string}
+   */
+  localDate (value) {
+    return moment.utc(value).calendar()
+  },
+
+  /**
    * List a given string value.
    *
    * @param value
    */
   limit (value) {
-    return value.substring(0, 30)
+    const limit = toString(value)
+
+    return (limit.length > 150) ? (limit.substring(0, 147) + '...') : limit
   }
 }

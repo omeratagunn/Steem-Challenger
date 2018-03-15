@@ -13,7 +13,8 @@ export default {
     'loading',
     'username',
     'wallet',
-    'discussions'
+    'discussions',
+    'priceFeed'
   ]),
 
   /**

@@ -45,6 +45,9 @@
 
     thead {
       tr {
+        text-transform: uppercase;
+      }
+      tr {
         > th:first-child {
           padding-left: 15px;
         }
@@ -53,6 +56,10 @@
 
     tbody {
       tr {
+        > td {
+          font-weight: 500;
+          color: $gray-600;
+        }
         > th:first-child {
           padding-left: 15px;
         }
