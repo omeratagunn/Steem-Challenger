@@ -1,4 +1,23 @@
 div.app
   ch-header
-  div.container#content
+  main.container#content(role="container")
     router-view
+  footer.footer
+    div.container
+      div.row
+        div.col-sm-6
+          span.by Created by&nbsp;
+          a(href="https://busy.org/@hernandev", target="_blank")
+            | @hernandev
+          span.and and
+          a(href="https://busy.org/@omeratagun", target="_blank")
+            | @omeratagun
+        div.col-sm-6.text-right
+          div.witness
+            span.heart
+              em.icon-heart
+            span.enjoy
+              | Enjoyed this tool?
+            span.vote
+              a(href="https://steemconnect.com/sign/account-witness-vote?witness=hernandev&approve=1", target="_blank") Vote @hernandev for Witness!
+
