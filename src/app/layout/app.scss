@@ -10,69 +10,9 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
-.footer {
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.07);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 1.3em; /* Vertically center the text there */
-  background-color: white;
 
-  padding: 10px 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: lighten($gray-600, 10%);
-  font-family: 'Roboto Slab', sans-serif;
-  letter-spacing: 0.025em;
-  a {
-    font-weight: 600;
-  }
-
-  span.heart {
-    // padding-right: 10px;
-    font-size: 26px;
-    color: $red;
-    right: 0;
-    top: 5px;
-    position: absolute;
-
-    em {
-      font-weight: 600;
-    }
-  }
-
-  div.witness {
-    padding-right: 40px;
-    display: block;
-    float: left;
-    width: 100%;
-    position: relative;
-  }
-
-  span.by {
-    font-size: 12px;
-    display: block;
-  }
-  span.and {
-    &:before {
-      content: " ";
-    }
-    &:after {
-      content: " ";
-    }
-  }
-  span.enjoy {
-    font-size: 12px;
-    display: block;
-  }
-  span.vote {
-    display: block;
-  }
-}
 
 
 /* Custom page CSS
@@ -80,13 +20,9 @@ body {
 /* Not required for template or sticky footer method. */
 
 body > .container {
-  padding: 60px 15px 0;
+  padding: 80px 15px 0;
 }
 
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
 
 code {
   font-size: 80%;
