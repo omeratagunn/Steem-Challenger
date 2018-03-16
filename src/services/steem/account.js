@@ -54,7 +54,11 @@ export const getAccount = (username) => {
       // resolve the promise and return.
       return getSteemPower(account.vesting_shares).then(v => {
         account._sp = v
-      }).then(() => Promise.resolve(account))
+      }).then(() => getSteemPower(account.delegated_vesting_shares).then(v => {
+        account._delegated_sp = (v * -1)
+      })).then(() => getSteemPower(account.received_vesting_shares).then(v => {
+        account._received_sp = v
+      })).then(() => Promise.resolve(account))
     } else {
       // reject with not found message.
       return Promise.reject(new Error('STEEM_ACCOUNT_NOT_FOUND'))

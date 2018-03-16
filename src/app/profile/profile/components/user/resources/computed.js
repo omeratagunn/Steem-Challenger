@@ -51,5 +51,17 @@ export default {
 
     // anything above that is a whale.
     return 'Whale'
+  },
+
+  /**
+   * Steem Power Information.
+   *
+   * @return {string}
+   */
+  spInfo () {
+    const ownSp = this.nFormatter(get(this.account, '_sp', ''))
+    const delegatedSp = this.nFormatter(get(this.account, '_delegated_sp', ''))
+    const receivedSp = this.nFormatter(get(this.account, '_received_sp', ''))
+    return `+ Vested: ${ownSp} SP\n+ Received SP: ${receivedSp} SP\n-  Delegated: ${delegatedSp} SP`
   }
 }

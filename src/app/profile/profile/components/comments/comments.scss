@@ -52,6 +52,10 @@
       tr {
         > th:first-child {
           padding-left: 15px;
+          max-width: 200px;
+        }
+        > th:last-child {
+          padding-right: 15px;
         }
       }
     }
@@ -59,8 +63,20 @@
     tbody {
       tr {
         > td {
+          white-space: nowrap;
           font-weight: 500;
           color: $gray-600;
+        }
+        > th.permlink {
+          max-width: 200px;
+          overflow-x: hidden;
+          a {
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
         }
         > th:first-child {
           padding-left: 15px;

@@ -1,5 +1,5 @@
 // user profile wallet
-ch-box(v-if="loading !== true", :padded="false", title="Pending Comments Payout: ", icon="icon-hourglass")
+ch-box(v-if="loading !== true", :padded="false", title="Commenter Payout: ", icon="icon-hourglass")
   span.title-extra(slot="title-extra")
     | ${{ convertSbdToUSD(totalPayout) | roundAmount }}
   // profile wallet wrapper.
@@ -16,22 +16,25 @@ ch-box(v-if="loading !== true", :padded="false", title="Pending Comments Payout:
         tbody
           tr
             td
+              | no payouts for&nbsp;
               span @{{ username }}
-              | has no pending payouts at the moment.
+              | at the moment.
 
       table.table(v-if="pendingDiscussionsCount > 0")
         thead
           tr
             th(scope='col') Comment
             th.right(scope='col') CashOut
-            th.right(scope='col') Beneficiaries
+            th.right(scope='col')
+              span.d-none.d-sm-block Beneficiaries
+              span.d-block.d-sm-none Ben.
             th.right(scope='col') SBD
             th.right(scope='col') SP
             th.right(scope='col') USD
         tbody
           tr(v-for="post in pendingDiscussions", v-if="post._pending_payout_value > 0")
             // link to the post.
-            th(scope="row", data-toggle="tooltip", data-placement="auto", :title="post.body | limit")
+            th.permlink(scope="row", data-toggle="tooltip", data-placement="auto", :title="post.body | limit")
               a(:href="'https://steemit.com'+post.url", target="_blank")
                 | {{ post.permlink }}
             // when is the money be available?

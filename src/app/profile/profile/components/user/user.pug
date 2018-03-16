@@ -51,15 +51,15 @@ ch-box(v-if="loading !== true", title="User Details", icon="icon-user")
       // badges
       div.badges
         // posts count.
-        span.badge.badge-primary
-          span {{ account.post_count }}
+        span.badge.badge-primary(data-toggle="tooltip", data-placement="auto", :title="account.post_count")
+          span {{ nFormatter(account.post_count) }}
           | &nbsp;Posts
         // voting power.
         span.badge.badge-primary
           span {{ account.voting_power | percent }}
           | &nbsp;VP
         // steem power.
-        span.badge.badge-primary
-          span {{ account._sp | steemPower }}
+        span.badge.badge-primary(data-toggle="tooltip", data-placement="auto", :title="spInfo")
+          span {{ nFormatter(account._sp + account._received_sp + account._delegated_sp) }}
           | &nbsp;SP
 
