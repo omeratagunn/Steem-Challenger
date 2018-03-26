@@ -4,7 +4,7 @@ import filters from './filters'
 import methods from './methods'
 
 /**
- * STEEM-CHALLENGER.
+ * STEEM.SHOW.
  *
  * Post box resources mixin.
  */

@@ -3,7 +3,7 @@ import { routes as profile } from './profile'
 import { routes as home } from './home'
 
 /**
- * STEEM-CHALLENGER.
+ * STEEM.SHOW.
  *
  * Export all modules routes.
  */

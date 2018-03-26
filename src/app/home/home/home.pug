@@ -6,18 +6,18 @@ div.row
 
       div.col-lg-6.search-box
           div.col-lg
-            h4 Search an STEEM account...
+            h4 Search an Steem account...
             form(v-on:submit.prevent="redirect")
 
               div.form-row.align-items-center
-                div.col-10
+                div.col-9.col-lg-10
                   label.sr-only(for='inlineFormInputGroup') Username
                   .input-group.mb-2
                     .input-group-prepend
                       .input-group-text @
                     ch-user-search(v-model="query", @selected="redirect", @input="updateQuery")
-                div.col-2.right
-                  button.btn.btn-primary.mb-2(type='submit', @click="redirect") Go
+                div.col-3.col-lg-2.right
+                  button.btn.btn-primary.mb-2(type='submit', @click="redirect") Show
 
 
     div.row.row-eq-height.home-content.justify-content-center
