@@ -3,7 +3,7 @@
 import resources from './resources'
 
 /**
- * STEEM-CHALLENGER.
+ * STEEM.SHOW.
  *
  * User search component.
  */

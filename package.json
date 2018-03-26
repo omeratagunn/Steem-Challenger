@@ -1,7 +1,7 @@
 {
-  "name": "steem-challenger",
-  "version": "2.0.0",
-  "description": "Steem-Challenger is here to make your life easier. Will work on to gather all your needs in one single website.",
+  "name": "steem.show",
+  "version": "2.2.0",
+  "description": "Steem.show is here to make your life easier. Will work on to gather all your needs in one single website.",
   "private": false,
   "license": "MIT",
   "scripts": {
